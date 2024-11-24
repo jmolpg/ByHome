@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imobiliária - ByHome</title>
+    <link rel="icon" href="./images/LogoSample_ByTailorBrands.jpg" type="image/jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./images/LogoSample_ByTailorBrands.jpg" alt="Imobiliária ByHome">
+            </div>
+            <ul class="ulGrid">
+                <li class="dropdown">
+                    <a class="titleHeader" href="#">Alugar</a>
+                    <div class="dropdown-content">
+                        <ul class="citys">
+                            <h3 class="titleDropdown">Cidade</h3>
+                            <li class="city">Lisboa
+                                <ul class="property-type-dropdown">
+                                    <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                    <li>Casas para alugar</li>
+                                    <li>Apartamentos para alugar</li>
+                                    <li>Kitnets para alugar</li>
+                                </ul>
+                            </li>
+                            <li class="city">Porto
+                                <ul class="property-type-dropdown">
+                                    <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                    <li>Casas para alugar</li>
+                                    <li>Apartamentos para alugar</li>
+                                    <li>Kitnets para alugar</li>
+                                </ul>
+                            </li>
+                            <li class="city">Funchal
+                                <ul class="property-type-dropdown">
+                                    <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                    <li>Casas para alugar</li>
+                                    <li>Apartamentos para alugar</li>
+                                    <li>Kitnets para alugar</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="titleHeader" href="#">Comprar</a>
+                    <div class="dropdown-content">
+                        <ul class="citys">
+                            <h3 class="titleDropdown">Cidade</h3>
+                            <li class="city">Lisboa
+                                <ul class="property-type-dropdown">
+                                    <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                    <li>Casas para comprar</li>
+                                    <li>Apartamentos para comprar</li>
+                                    <li>Kitnets para comprar</li>
+                                </ul>
+                            </li>
+                            <li class="city">Porto
+                                <ul class="property-type-dropdown">
+                                    <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                    <li>Casas para comprar</li>
+                                    <li>Apartamentos para comprar</li>
+                                    <li>Kitnets para comprar</li>
+                                </ul>
+                            </li>
+                            <li class="city">Funchal
+                                <ul class="property-type-dropdown">
+                                    <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                    <li>Casas para comprar</li>
+                                    <li>Apartamentos para comprar</li>
+                                    <li>Kitnets para comprar</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="titleHeader" href="#">Sobre</a></li>
+                <li>
+                    <button class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i>
+                        Contato
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Pesquisa -->
+
+    <section class="search">
+        <div class="search-container">
+            <h2>Encontre o imóvel dos seus sonhos</h2>
+            <div class="toggle-buttons">
+                <button id="comprar" class="toggle-button active" onclick="toggle('comprar')">Comprar</button>
+                <button id="alugar" class="toggle-button" onclick="toggle('alugar')">Alugar</button>
+            </div>
+            <form action="#" method="GET" class="search-form">
+                <div class="search-fields">
+                    <div class="formGrid">
+                        <div class="field city">
+                            <div class="nameInput">
+                                <label for="city">Cidade</label>
+                            </div>
+                            <input type="text" id="city" name="city" placeholder="Digite a cidade">
+                        </div>
+
+                        <div class="field">
+                            <div class="nameInput">
+                                <label for="neighborhood">Bairro</label>
+                            </div>
+                            <input type="text" id="neighborhood" name="neighborhood" placeholder="Digite o bairro">
+                        </div>
+                    </div>
+
+                    <div class="double-fields">
+                        <div class="field half">
+                            <div class="nameInput">
+                                <label for="total-value">Valor total</label>
+                            </div>
+                            <input type="number" id="total-value" name="total-value" placeholder="Valor total (€)">
+                        </div>
+                        <div class="field half">
+                            <div class="nameInput">
+                                <label for="bedrooms">Quartos</label>
+                            </div>
+                            <input type="number" id="bedrooms" name="bedrooms" placeholder="Quartos">
+                        </div>
+                    </div>
+
+                    <!-- Botão de busca -->
+                    <div class="field">
+                        <button type="submit" class="search-button">Buscar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Imóveis em Destaque -->
+    <section class="featured-properties">
+        <h2>Imóveis em Destaque</h2>
+        <div class="carrossel">
+            <div class="property-cards slides">
+                <div class="property-card">
+                    <img src="./images/pexels-fotoaibe-1571460.jpg" alt="Imóvel 1">
+                    <p class="price">€ 300.000</p>
+                    <p class="location">Lisboa - Portugal</p>
+                    <div class="align-buttons">
+                        <button class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Contato
+                        </button>
+                        <button class="visit-button">Agende uma visita</button>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <img src="./images/pexels-fotoaibe-1643384.jpg" alt="Imóvel 2">
+                    <p class="price">€ 200.000</p>
+                    <p class="location">Porto - Portugal</p>
+                    <div class="align-buttons">
+                        <button class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Contato
+                        </button>
+                        <button class="visit-button">Agende uma visita</button>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <img src="./images/pexels-fotoaibe-813692.jpg" alt="Imóvel 3">
+                    <p class="price">€ 450.000</p>
+                    <p class="location">Funchal - Madeira</p>
+                    <div class="align-buttons">
+                        <button class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Contato
+                        </button>
+                        <button class="visit-button">Agende uma visita</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Botões de navegação -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="titleFooter">Imobiliária ByHome</h3>
+                <p>A sua escolha certa para comprar, vender ou arrendar imóveis em Lisboa e arredores.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="titleFooter">Contactos</h4>
+                <ul>
+                    <li>Telefone: +351 123 456 789</li>
+                    <li>Email: info@imobiliariaByhome.pt</li>
+                    <li>Endereço: Rua Exemplo, 123 - 1000-000 Lisboa, Portugal</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="titleFooter">Links Úteis</h4>
+                <ul>
+                    <li><a href="#">Comprar Imóveis</a></li>
+                    <li><a href="#">Alugar Imóveis</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="titleFooter">Redes Sociais</h4>
+                <ul class="social-media">
+                    <li><a href="https://facebook.com/imobiliariaByhome" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com/imobiliariaByhome" target="_blank">Instagram</a></li>
+                    <li><a href="https://linkedin.com/company/imobiliariaByhome" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Imobiliária Byhome - Todos os direitos reservados</p>
+            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos e Condições</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
