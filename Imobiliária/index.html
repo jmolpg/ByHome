@@ -83,6 +83,7 @@
                     </div>
                 </li>
                 <li><a class="titleHeader" href="#">Sobre</a></li>
+                <li><a class="titleHeader" href="#">Agende uma visita</a></li>
                 <li>
                     <button class="whatsapp-button">
                         <i class="fab fa-whatsapp"></i>
@@ -96,51 +97,53 @@
     <!-- Seção de Pesquisa -->
 
     <section class="search">
-        <div class="search-container">
-            <h2>Encontre o imóvel dos seus sonhos</h2>
-            <div class="toggle-buttons">
-                <button id="comprar" class="toggle-button active" onclick="toggle('comprar')">Comprar</button>
-                <button id="alugar" class="toggle-button" onclick="toggle('alugar')">Alugar</button>
-            </div>
-            <form action="#" method="GET" class="search-form">
-                <div class="search-fields">
-                    <div class="formGrid">
-                        <div class="field city">
-                            <div class="nameInput">
-                                <label for="city">Cidade</label>
-                            </div>
-                            <input type="text" id="city" name="city" placeholder="Digite a cidade">
-                        </div>
-
-                        <div class="field">
-                            <div class="nameInput">
-                                <label for="neighborhood">Bairro</label>
-                            </div>
-                            <input type="text" id="neighborhood" name="neighborhood" placeholder="Digite o bairro">
-                        </div>
-                    </div>
-
-                    <div class="double-fields">
-                        <div class="field half">
-                            <div class="nameInput">
-                                <label for="total-value">Valor total</label>
-                            </div>
-                            <input type="number" id="total-value" name="total-value" placeholder="Valor total (€)">
-                        </div>
-                        <div class="field half">
-                            <div class="nameInput">
-                                <label for="bedrooms">Quartos</label>
-                            </div>
-                            <input type="number" id="bedrooms" name="bedrooms" placeholder="Quartos">
-                        </div>
-                    </div>
-
-                    <!-- Botão de busca -->
-                    <div class="field">
-                        <button type="submit" class="search-button">Buscar</button>
-                    </div>
+        <div class="alignForm">
+            <div class="search-container">
+                <h2>Encontre o imóvel dos seus sonhos</h2>
+                <div class="toggle-buttons">
+                    <button id="comprar" class="toggle-button active" onclick="toggle('comprar')">Comprar</button>
+                    <button id="alugar" class="toggle-button" onclick="toggle('alugar')">Alugar</button>
                 </div>
-            </form>
+                <form action="#" method="GET" class="search-form">
+                    <div class="search-fields">
+                        <div class="formGrid">
+                            <div class="field city">
+                                <div class="nameInput">
+                                    <label for="city">Cidade</label>
+                                </div>
+                                <input type="text" id="city" name="city" placeholder="Digite a cidade">
+                            </div>
+
+                            <div class="field">
+                                <div class="nameInput">
+                                    <label for="neighborhood">Bairro</label>
+                                </div>
+                                <input type="text" id="neighborhood" name="neighborhood" placeholder="Digite o bairro">
+                            </div>
+                        </div>
+
+                        <div class="double-fields">
+                            <div class="field half">
+                                <div class="nameInput">
+                                    <label for="total-value">Valor total</label>
+                                </div>
+                                <input type="number" id="total-value" name="total-value" placeholder="Valor total (€)">
+                            </div>
+                            <div class="field half">
+                                <div class="nameInput">
+                                    <label for="bedrooms">Quartos</label>
+                                </div>
+                                <input type="number" id="bedrooms" name="bedrooms" placeholder="Quartos">
+                            </div>
+                        </div>
+
+                        <!-- Botão de busca -->
+                        <div class="field">
+                            <button type="submit" class="search-button">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -148,49 +151,78 @@
     <!-- Imóveis em Destaque -->
     <section class="featured-properties">
         <h2>Imóveis em Destaque</h2>
-        <div class="carrossel">
-            <div class="property-cards slides">
-                <div class="property-card">
-                    <img src="./images/pexels-fotoaibe-1571460.jpg" alt="Imóvel 1">
-                    <p class="price">€ 300.000</p>
-                    <p class="location">Lisboa - Portugal</p>
-                    <div class="align-buttons">
-                        <button class="whatsapp-button">
-                            <i class="fab fa-whatsapp"></i>
-                            Contato
-                        </button>
-                        <button class="visit-button">Agende uma visita</button>
+        <section class="carrossel-container">
+            <!-- <button class="prev buttonsCarrosselExt" onclick="moveSlide(-1)">&#10094;</button> -->
+            <div class="carrosselExt">
+                <div class="property-cards slides">
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel1">
+                            <img src="./images/pexels-fotoaibe-1571460.jpg" alt="Imóvel 1">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel1',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel1',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 300.000</p>
+                        <p class="location">Lisboa - Portugal</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contato
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
                     </div>
-                </div>
-                <div class="property-card">
-                    <img src="./images/pexels-fotoaibe-1643384.jpg" alt="Imóvel 2">
-                    <p class="price">€ 200.000</p>
-                    <p class="location">Porto - Portugal</p>
-                    <div class="align-buttons">
-                        <button class="whatsapp-button">
-                            <i class="fab fa-whatsapp"></i>
-                            Contato
-                        </button>
-                        <button class="visit-button">Agende uma visita</button>
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel2">
+                            <img src="./images/pexels-fotoaibe-1643384.jpg" alt="Imóvel 2">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel2',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel2',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 200.000</p>
+                        <p class="location">Porto - Portugal</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contato
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
                     </div>
-                </div>
-                <div class="property-card">
-                    <img src="./images/pexels-fotoaibe-813692.jpg" alt="Imóvel 3">
-                    <p class="price">€ 450.000</p>
-                    <p class="location">Funchal - Madeira</p>
-                    <div class="align-buttons">
-                        <button class="whatsapp-button">
-                            <i class="fab fa-whatsapp"></i>
-                            Contato
-                        </button>
-                        <button class="visit-button">Agende uma visita</button>
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel3">
+                            <img src="./images/pexels-fotoaibe-813692.jpg" alt="Imóvel 3">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel3',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel3',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 450.000</p>
+                        <p class="location">Funchal - Madeira</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contato
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel4">
+                            <img src="./carrossel images/pexels-jvdm-1457842.jpg" alt="Imóvel 4">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel4',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel4',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 670.000</p>
+                        <p class="location">Aveiro - Portugal</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contato
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Botões de navegação -->
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
+            <!-- <button class="next buttonsCarrosselExt" onclick="moveSlide(1)">&#10095;</button> -->
+        </section>
     </section>
 
 
