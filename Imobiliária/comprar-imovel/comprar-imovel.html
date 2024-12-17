@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra - Imóveis para Compra</title>
+    <link rel="stylesheet" href="comprar-imovel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/LogoSample_ByTailorBrands.jpg" alt="Imobiliária ByHome">
+            </div>
+            <div>
+                <ul class="ulGrid"> 
+                    <a href="../index.html" class="titleHeader" >Home</a>
+                    <li class="dropdown">
+                        <a class="titleHeader" href="../consulta-imoveis/consulta-imoveis.html">Arrendar</a>
+                        <div class="dropdown-content">
+                            <ul class="citys">
+                                <h3 class="titleDropdown">Cidade</h3>
+                                <li class="city">Lisboa
+                                    <ul class="property-type-dropdown">
+                                        <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <li>Casas para arrendar</li>
+                                        <li>Apartamentos para arrendar</li>
+                                        <li>Kitnets para arrendar</li>
+                                    </ul>
+                                </li>
+                                <li class="city">Porto
+                                    <ul class="property-type-dropdown">
+                                        <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <li>Casas para arrendar</li>
+                                        <li>Apartamentos para arrendar</li>
+                                        <li>Kitnets para arrendar</li>
+                                    </ul>
+                                </li>
+                                <li class="city">Funchal
+                                    <ul class="property-type-dropdown">
+                                        <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <li>Casas para arrendar</li>
+                                        <li>Apartamentos para arrendar</li>
+                                        <li>Kitnets para arrendar</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="titleHeader" href="./comprar-imovel.html">Comprar</a>
+                        <div class="dropdown-content">
+                            <ul class="citys">
+                                <h3 class="titleDropdown">Cidade</h3>
+                                <li class="city">Lisboa
+                                    <ul class="property-type-dropdown">
+                                        <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <li>Casas para comprar</li>
+                                        <li>Apartamentos para comprar</li>
+                                        <li>Kitnets para comprar</li>
+                                    </ul>
+                                </li>
+                                <li class="city">Porto
+                                    <ul class="property-type-dropdown">
+                                        <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <li>Casas para comprar</li>
+                                        <li>Apartamentos para comprar</li>
+                                        <li>Kitnets para comprar</li>
+                                    </ul>
+                                </li>
+                                <li class="city">Funchal
+                                    <ul class="property-type-dropdown">
+                                        <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <li>Casas para comprar</li>
+                                        <li>Apartamentos para comprar</li>
+                                        <li>Kitnets para comprar</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="titleHeader" href="../about/about.html">Sobre</a></li>
+                    <li><a class="titleHeader" href="../visit/visit.html">Agende uma visita</a></li>
+                    <li>
+                        <button class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Contacto
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header> 
+
+    <main>
+        <section id="properties">
+            <h1>Imóveis para Compra</h1>
+            <div class="property-list">
+                <!-- Primeiro imóvel -->
+                <div class="property-card">
+                    <div class="carrossel" id="carrossel1">
+                        <img src="../carrossel images/pexels-fotoaibe-813692.jpg" alt="Imóvel 1">
+                        <div class="seta Esquerda" onclick="mudarImagem('carrossel1',-1)">&#10094;</div>
+                        <div class="seta Direita" onclick="mudarImagem('carrossel1',1)">&#10095;</div>
+                    </div>                    <div class="property-info">
+                        <a href="#" class="arrendaTitleCard">Casa Moderna em Lisboa</a>
+                        <p>3 quartos, 2 casas de banho</p>
+                        <p class="price">Preço: €650.000</p>
+                        <div class="align-buttons">
+                            <button class="visit-button">Agende uma visita</button>
+                            <button class="whatsapp-button whatsapp-button-card">
+                                <i class="fab fa-whatsapp"></i>
+                                Contacto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Segundo imóvel -->
+                <div class="property-card">
+                    <div class="carrossel" id="carrossel2">
+                        <img src="../carrossel images/pexels-fotoaibe-1643384.jpg" alt="Imóvel 2">
+                        <div class="seta Esquerda" onclick="mudarImagem('carrossel2',-1)">&#10094;</div>
+                        <div class="seta Direita" onclick="mudarImagem('carrossel2',1)">&#10095;</div>
+                    </div>
+                    <div class="property-info">
+                        <a href="#" class="arrendaTitleCard">Apartamento em Porto</a>
+                        <p>2 quartos, 1 casa de banho</p>
+                        <p class="price">Preço: €275.000</p>
+                        <div class="align-buttons">
+                            <button class="visit-button">Agende uma visita</button>
+                            <button class="whatsapp-button whatsapp-button-card">
+                                <i class="fab fa-whatsapp"></i>
+                                Contacto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Terceiro imóvel -->
+                <div class="property-card">
+                    <div class="carrossel" id="carrossel3">
+                        <img src="../carrossel images/pexels-pixabay-265004.jpg" alt="Imóvel 3">
+                        <div class="seta Esquerda" onclick="mudarImagem('carrossel3',-1)">&#10094;</div>
+                        <div class="seta Direita" onclick="mudarImagem('carrossel3',1)">&#10095;</div>
+                    </div>
+                    <div class="property-info">
+                        <a href="#" class="arrendaTitleCard">Vivenda em Algarve</a>
+                        <p>4 quartos, 3 casas de banho</p>
+                        <p class="price">Preço: €900.000</p>
+                        <div class="align-buttons">
+                            <button class="visit-button">Agende uma visita</button>
+                            <button class="whatsapp-button whatsapp-button-card">
+                                <i class="fab fa-whatsapp"></i>
+                                Contacto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="titleFooter">Imobiliária ByHome</h3>
+                <p>A sua escolha certa para comprar, vender ou arrendar imóveis em Lisboa e arredores.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="titleFooter">Contactos</h4>
+                <ul>
+                    <li>Telefone: +351 123 456 789</li>
+                    <li>Email: info@imobiliariaByhome.pt</li>
+                    <li>Endereço: Rua Exemplo, 123 - 1000-000 Lisboa, Portugal</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="titleFooter">Links Úteis</h4>
+                <ul>
+                    <li><a href="#">Comprar Imóveis</a></li>
+                    <li><a href="#">Arrendar Imóveis</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Contacto</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="titleFooter">Redes Sociais</h4>
+                <ul class="social-media">
+                    <li><a href="https://facebook.com/imobiliariaByhome" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com/imobiliariaByhome" target="_blank">Instagram</a></li>
+                    <li><a href="https://linkedin.com/company/imobiliariaByhome" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Imobiliária Byhome - Todos os direitos reservados</p>
+            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos e Condições</a></p>
+        </div>
+    </footer>
+
+    <script src="./comprar-imovel.js"></script>
+</body>
+</html>

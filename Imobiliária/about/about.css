@@ -1,0 +1,263 @@
+/* Estilos específicos para a página "Sobre" */
+#about {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#about h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #0056b3;
+}
+
+#about h2 {
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+#about p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+#about ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    color: #555;
+}
+
+#about ul li {
+    margin-bottom: 0.5rem;
+}
+
+
+ul{
+    list-style-type: none;
+  }
+  
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  header {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav .logo img {
+    width: 55px;
+  }
+
+  .ulGrid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .titleHeader {
+    font-size: 20px;
+    display: flex;
+  }
+
+  
+  /* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    /* min-width: 180px; */
+    z-index: 10;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dropdown-content ul li {
+    padding: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .dropdown-content ul li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Sub-dropdown de Tipos de Imóveis */
+  .property-type-dropdown {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #f9f9f9;
+    border-left: 2px solid #e2e2e2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+  }
+  
+  .city:hover .property-type-dropdown {
+    display: block;
+  }
+
+  .citys {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    /* Faz os links ficarem em uma coluna (um abaixo do outro) */
+  }
+
+  .city:hover .property-type-dropdown {
+    display: block;
+  }
+
+  .city {
+    margin-bottom: 20px;
+  }
+  
+  .titleDropdown {
+    margin: 7%;
+  }
+
+  .whatsapp-button {
+    background-color: #25d366;
+    /* Cor verde do WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128c7e;
+    /* Cor escura do WhatsApp quando o botão é hover */
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #3c3c3c;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    padding: 10px;
+    /* min-width: 220px; */
+  }
+  
+  .footer-section h3,
+  .footer-section h4 {
+    margin-top: 0;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: black;
+  }
+
+  .titleFooter {
+    margin-bottom: 5%;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+  }
+  
+  .footer-bottom p {
+    margin: 5px 0;
+  }
+  
+  .footer-bottom a {
+    color: #ddd;
+    text-decoration: none;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .totalContainer{
+    background-image: url(./images/pexels-julieaagaard-1368502.jpg);
+    background-size: 50%; 
+  }
+
+  .whatsapp-button:focus,
+.visit-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+  /* Efeito de foco */
+}
+
+.whatsapp-button i {
+    margin-right: 10px;
+    /* Espaço entre o ícone e o texto */
+    font-size: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #3c3c3c; 
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: black;
+    background-color: #f0f0f0;
+    /* Cor cinza claro no hover */
+  }
