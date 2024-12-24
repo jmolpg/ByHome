@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imobiliária - ByHome</title>
+    <link rel="icon" href="../images/LogoSample_ByTailorBrands.jpg" type="image/jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/LogoSample_ByTailorBrands.jpg" alt="Imobiliária ByHome">
+            </div>
+            <div>
+                <ul class="ulGrid"> 
+                    <a class="titleHeader" >Home</a>
+                    <li class="dropdown">
+                        <label for="dropdown-toggle" class="titleHeader link-com-chevron">
+                            Arrendar
+                            <span class="chevron"></span> <!-- Aqui está a setinha -->
+                          </label>
+                        <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle openClose" />
+                        
+                        <div id="dropdown-content" class="dropdown-content">
+                          <ul class="citys">
+                            <h3 class="titleDropdown">Cidade</h3>
+                            <div class="c-line"></div>
+                            <li class="city">Lisboa
+                              <ul class="property-type-dropdown">
+                                <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                <div class="c-line"></div>
+                                <li>Casas para arrendar</li>
+                                <li>Apartamentos para arrendar</li>
+                                <li>Kitnets para arrendar</li>
+                              </ul>
+                            </li>
+                            <li class="city">Porto
+                              <ul class="property-type-dropdown">
+                                <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                <div class="c-line"></div>
+                                <li>Casas para arrendar</li>
+                                <li>Apartamentos para arrendar</li>
+                                <li>Kitnets para arrendar</li>
+                              </ul>
+                            </li>
+                            <li class="city">Funchal
+                              <ul class="property-type-dropdown">
+                                <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                <div class="c-line"></div>
+                                <li>Casas para arrendar</li>
+                                <li>Apartamentos para arrendar</li>
+                                <li>Kitnets para arrendar</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      
+                    <li class="dropdown">
+                        <label for="dropdown-toggle-comprar" class="titleHeader link-com-chevron">
+                            Comprar
+                            <span class="chevron"></span> <!-- Aqui está a setinha -->
+                          </label>
+                          <input type="checkbox" id="dropdown-toggle-comprar" class="dropdown-toggle-comprar openClose" />  
+                        <div id="dropdown-content-comprar" class="dropdown-content-comprar">
+                            <ul class="citys">
+                                <h3 class="titleDropdown">Cidade</h3>
+                                <div class="c-line"></div>
+                                <li class="city">Lisboa
+                                    <ul class="property-type-dropdown">
+                                        <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <div class="c-line"></div>
+                                        <li>Casas para comprar</li>
+                                        <li>Apartamentos para comprar</li>
+                                        <li>Kitnets para comprar</li>
+                                    </ul>
+                                </li>
+                                <li class="city">Porto
+                                    <ul class="property-type-dropdown">
+                                        <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <div class="c-line"></div>
+                                        <li>Casas para comprar</li>
+                                        <li>Apartamentos para comprar</li>
+                                        <li>Kitnets para comprar</li>
+                                    </ul>
+                                </li>
+                                <li class="city">Funchal
+                                    <ul class="property-type-dropdown">
+                                        <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <div class="c-line"></div>
+                                        <li>Casas para comprar</li>
+                                        <li>Apartamentos para comprar</li>
+                                        <li>Kitnets para comprar</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="titleHeader" href="../about/about.html">Sobre</a></li>
+                    <li><a class="titleHeader" href="../visit/visit.html">Agende uma visita</a></li>
+                    <li>
+                        <button class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Contacto
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header> 
+
+    <!-- Seção de Pesquisa -->
+
+    <section class="search">
+        <div class="alignForm">
+            <div class="search-container">
+                <h2>Encontre o imóvel dos seus sonhos</h2>
+                <div class="toggle-buttons">
+                    <button id="comprar" class="toggle-button active" onclick="toggle('comprar')">Comprar</button>
+                    <button id="alugar" class="toggle-button" onclick="toggle('alugar')">Arrendar</button>
+                </div>
+                <form action="#" method="GET" class="search-form">
+                    <div class="search-fields">
+                        <div class="formGrid">
+                            <div class="field city">
+                                <div class="nameInput">
+                                    <label for="city">Cidade</label>
+                                </div>
+                                <input type="text" id="city" name="city" placeholder="Digite a cidade">
+                            </div>
+
+                            <div class="field">
+                                <div class="nameInput">
+                                    <label for="neighborhood">Bairro</label>
+                                </div>
+                                <input type="text" id="neighborhood" name="neighborhood" placeholder="Digite o bairro">
+                            </div>
+                        </div>
+
+                        <div class="double-fields">
+                            <div class="field half">
+                                <div class="nameInput">
+                                    <label for="total-value">Quantia total</label>
+                                </div>
+                                <input type="number" id="total-value" name="total-value" placeholder="Quantia total (€)">
+                            </div>
+                            <div class="field half">
+                                <div class="nameInput">
+                                    <label for="bedrooms">Quartos</label>
+                                </div>
+                                <input type="number" id="bedrooms" name="bedrooms" placeholder="Quartos">
+                            </div>
+                        </div>
+
+                        <!-- Botão de busca -->
+                        <div class="field">
+                            <button type="submit" class="search-button">Procurar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Imóveis em Destaque venda-->
+    <div class="textDestaques">
+        <h2 class="textImoveis">Imóveis em Destaque- Comprar</h2>
+    </div>
+    <section class="featured-properties">
+        <section class="carrossel-container">
+            <!-- <button class="prev buttonsCarrosselExt" onclick="moveSlide(-1)">&#10094;</button> -->
+            <div class="carrosselExt">
+                <div class="property-cards slides">
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel1">
+                            <img src="../images/pexels-fotoaibe-1571460.jpg" alt="Imóvel 1">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel1',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel1',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 300.000</p>
+                        <p class="location">Lisboa - Portugal</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contacto
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel2">
+                            <img src="../images/pexels-fotoaibe-1643384.jpg" alt="Imóvel 2">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel2',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel2',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 200.000</p>
+                        <p class="location">Porto - Portugal</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contacto
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel3">
+                            <img src="../images/pexels-fotoaibe-813692.jpg" alt="Imóvel 3">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel3',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel3',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 450.000</p>
+                        <p class="location">Funchal - Madeira</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contacto
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <div class="internCard">
+                            <div class="carrossel" id="carrossel4">
+                                <img src="../carrossel images/pexels-jvdm-1457842.jpg" alt="Imóvel 4">
+                                <div class="seta Esquerda" onclick="mudarImagem('carrossel4',-1)">&#10094;</div>
+                                <div class="seta Direita" onclick="mudarImagem('carrossel4',1)">&#10095;</div>
+                            </div>
+                            <p class="price">€ 670.000</p>
+                            <p class="location">Aveiro - Portugal</p>
+                            <div class="align-buttons">
+                                <button class="whatsapp-button">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contacto
+                                </button>
+                                <button class="visit-button">Agende uma visita</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <button class="next buttonsCarrosselExt" onclick="moveSlide(1)">&#10095;</button> -->
+        </section>
+    </section>
+    <!-- Imóveis em Destaque arrenda-->
+    <div class="textDestaques">
+        <h2 class="textImoveis">Imóveis em Destaque- Arrendar</h2>
+    </div>
+    <section class="featured-properties">
+        <section class="carrossel-container">
+            <!-- <button class="prev buttonsCarrosselExt" onclick="moveSlide(-1)">&#10094;</button> -->
+            <div class="carrosselExt">
+                <div class="property-cards slides">
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel1">
+                            <img src="../images/pexels-fotoaibe-1571460.jpg" alt="Imóvel 1">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel1',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel1',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 2.000,00/mês</p>
+                        <p class="location">Lisboa - Portugal</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contacto
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel2">
+                            <img src="../images/pexels-fotoaibe-1643384.jpg" alt="Imóvel 2">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel2',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel2',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 2.000/mês </p>
+                        <p class="location">Porto - Portugal</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contacto
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <div class="carrossel" id="carrossel3">
+                            <img src="../images/pexels-fotoaibe-813692.jpg" alt="Imóvel 3">
+                            <div class="seta Esquerda" onclick="mudarImagem('carrossel3',-1)">&#10094;</div>
+                            <div class="seta Direita" onclick="mudarImagem('carrossel3',1)">&#10095;</div>
+                        </div>
+                        <p class="price">€ 3.000/mês</p>
+                        <p class="location">Funchal - Madeira</p>
+                        <div class="align-buttons">
+                            <button class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Contacto
+                            </button>
+                            <button class="visit-button">Agende uma visita</button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <div class="internCard">
+                            <div class="carrossel" id="carrossel4">
+                                <img src="../carrossel images/pexels-jvdm-1457842.jpg" alt="Imóvel 4">
+                                <div class="seta Esquerda" onclick="mudarImagem('carrossel4',-1)">&#10094;</div>
+                                <div class="seta Direita" onclick="mudarImagem('carrossel4',1)">&#10095;</div>
+                            </div>
+                            <p class="price">€ 1.000</p>
+                            <p class="location">Aveiro - Portugal</p>
+                            <div class="align-buttons">
+                                <button class="whatsapp-button">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contacto
+                                </button>
+                                <button class="visit-button">Agende uma visita</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <button class="next buttonsCarrosselExt" onclick="moveSlide(1)">&#10095;</button> -->
+        </section>
+    </section>
+
+
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="titleFooter">Imobiliária ByHome</h3>
+                <p>A sua escolha certa para comprar, vender ou arrendar imóveis em Lisboa e arredores.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="titleFooter">Contactos</h4>
+                <ul>
+                    <li>Telefone: +351 123 456 789</li>
+                    <li>Email: info@imobiliariaByhome.pt</li>
+                    <li>Endereço: Rua Exemplo, 123 - 1000-000 Lisboa, Portugal</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="titleFooter">Links Úteis</h4>
+                <ul>
+                    <li><a href="#">Comprar Imóveis</a></li>
+                    <li><a href="#">Arrendar Imóveis</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Contacto</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="titleFooter">Redes Sociais</h4>
+                <ul class="social-media">
+                    <li><a href="https://facebook.com/imobiliariaByhome" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com/imobiliariaByhome" target="_blank">Instagram</a></li>
+                    <li><a href="https://linkedin.com/company/imobiliariaByhome" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Imobiliária Byhome - Todos os direitos reservados</p>
+            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos e Condições</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

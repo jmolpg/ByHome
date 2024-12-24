@@ -95,58 +95,12 @@ nav .logo img {
     width: 55px;
   }
 
-  /* Dropdown */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 150%;
-    left: 0;
-    background-color: #ffffff;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    /* min-width: 180px; */
-    z-index: 10;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown-content ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .dropdown-content ul li {
-    padding: 12px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .dropdown-content ul li:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Sub-dropdown de Tipos de Imóveis */
-  .property-type-dropdown {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background-color: #f9f9f9;
-    border-left: 2px solid #e2e2e2;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 20;
-  }
-  
-  .city:hover .property-type-dropdown {
-    display: block;
-  }
-
-  .titleHeader {
-    font-size: 20px;
-    display: flex;
-  }
+  /* Cabeçalho */
+header {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
   .citys {
     color: black;
@@ -157,15 +111,11 @@ nav .logo img {
   }
 
   .titleDropdown {
-    margin: 7%;
+    margin: 6%;
   }
 
   .city {
     margin-bottom: 20px;
-  }
-
-  .city:hover .property-type-dropdown {
-    display: block;
   }
 
   .footer-content {
@@ -376,14 +326,302 @@ nav {
     align-items: center;
 }
 
-header {
-  background-color: #ffffff;
-  padding: 20px 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 a {
   text-decoration: none;
   color: #3c3c3c; 
   font-weight: bold;
+}
+
+
+/* Esconde o checkbox */
+.dropdown-toggle, .dropdown-toggle-comprar {
+  display: none;
+}
+
+
+.dropdown-content ul li a, .dropdown-content-comprar ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 20px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+
+/* Quando o checkbox estiver checado, o menu aparece */
+.dropdown-toggle:checked + .dropdown-content, .dropdown-toggle-comprar:checked + .dropdown-content-comprar  {
+  display: block;
+}
+
+/* Quando o checkbox estiver checado, rotaciona a setinha */
+.dropdown-toggle:checked + .dropdown-content + .titleHeader .chevron, .dropdown-toggle-comprar:checked + .dropdown-content-comprar + .titleHeader .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown-content ul, .dropdown-content-comprar ul  {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content ul li a:hover, .dropdown-content-comprar ul li a:hover  {
+  background-color: #ddd;
+}
+
+.dropdown-content ul li:hover, .dropdown-content-comprar ul li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Dropdown */
+.dropdown-content, .dropdown-content-comprar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 25vw !important;
+  z-index: 10;
+  font-family: sans-serif;
+}
+
+.dropdown-content ul li, .dropdown-content-comprar ul li  {
+  padding: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+
+/* Estilo do label (que será clicado) */
+.titleHeader {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  color: black;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.c-line{
+  width: 100%;        /* Largura da linha */
+  height: 2px;        /* Espessura da linha */
+  background-color: #333;  /* Cor da linha */
+  margin: 20px 0;     /* Espaçamento acima e abaixo */
+}
+
+/* Sub-dropdown de Tipos de Imóveis */
+.property-type-dropdown {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #f9f9f9;
+  border-left: 2px solid #e2e2e2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  width: 25vw !important;
+}
+
+.city:hover .property-type-dropdown {
+  display: block;
+}
+
+.property-type-dropdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.property-type-dropdown ul li {
+  padding: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.property-type-dropdown ul li:hover {
+  background-color: #f1f1f1;
+}
+
+.citys {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  /* Faz os links ficarem em uma coluna (um abaixo do outro) */
+}
+
+
+.link-com-chevron {
+  text-decoration: none;  /* Remove o sublinhado do link */
+  font-size: 16px;        /* Tamanho do texto */
+  font-weight: bold;      /* Estilo do texto */
+  position: relative;     /* Necessário para posicionar o chevron */
+  padding-right: 20px;    /* Espaço para a setinha */
+}
+
+.link-com-chevron::after {
+  content: '';                  /* Adiciona o conteúdo vazio */
+  position: absolute;           /* Posiciona a setinha */
+  right: 0;                     /* Coloca a setinha à direita */
+  top: 50%;                     /* Centraliza verticalmente */
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;  /* Cria o triângulo à esquerda */
+  border-right: 5px solid transparent; /* Cria o triângulo à direita */
+  border-top: 5px solid black;        /* Cria a setinha para baixo */
+  transform: translateY(-50%);  /* Ajusta para que o chevron fique perfeitamente no centro */
+}
+
+/* Estilo da setinha */
+.chevron {
+  margin-left: 8px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white; /* Setinha para baixo */
+  transition: transform 0.3s;
+}
+
+
+
+
+
+
+/* Estilos do container de pesquisa */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+/* Input grande de texto */
+.search-input {
+  padding: 12px;
+  width: 60vw;
+  font-size: 16px;
+  border: none;  border-radius: 30px;
+  background-color: rgb(243, 242, 242);
+  height: 8vh;
+  color: grey;
+}
+
+/* Botões "Filtro" e "Pesquisar" */
+.action-btn {
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos do dropdown de filtros */
+.filters-dropdown {
+  display: none;
+  margin-top: 10px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 30vw; /* Ajuste conforme necessário */
+  top: 100px; /* Ajuste a posição conforme necessário */
+  z-index: 9999;
+  overflow-y: auto; 
+}
+
+/* Estilo geral para o botão de filtros */
+#filters-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Dropdown de filtros */
+.filters-dropdown {
+  display: none; /* Inicialmente escondido */
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-height: 500px;
+  width: 300px;
+  overflow-y: auto; /* Permite rolagem */
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mostrar o dropdown ao clicar no botão */
+#filters-btn.active + .filters-dropdown {
+  display: block;
+}
+
+/* Estilo do formulário de filtros */
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Ajuste para os inputs de número e o espaçamento entre os rótulos e inputs */
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter-item label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Alinhar checkbox com o texto */
+.filter-item input[type="checkbox"],
+.filter-item input[type="radio"] {
+  vertical-align: middle; /* Alinha os checkboxes e rádios com o texto */
+  margin-right: 5px;
+}
+
+/* Estilo para os inputs de número */
+.filter-item input[type="number"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilo para os botões e inputs */
+.search-input, .search-button {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo do botão de aplicar filtros */
+.search-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
 }

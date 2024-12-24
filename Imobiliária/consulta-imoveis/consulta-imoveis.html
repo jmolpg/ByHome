@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
+
 <body>
+
     <!-- Cabeçalho -->
     <header>
         <nav>
@@ -16,16 +19,23 @@
                 <img src="../images/LogoSample_ByTailorBrands.jpg" alt="Imobiliária ByHome">
             </div>
             <div>
-                <ul class="ulGrid"> 
-                    <a href="../index.html" class="titleHeader" >Home</a>
+                <ul class="ulGrid">
+                    <a href="../home/index.html" class="titleHeader">Home</a>
                     <li class="dropdown">
-                        <a class="titleHeader" href="./consulta-imoveis.html">Arrendar</a>
-                        <div class="dropdown-content">
+                        <label for="dropdown-toggle" class="titleHeader link-com-chevron">
+                            Arrendar
+                            <span class="chevron"></span> <!-- Aqui está a setinha -->
+                        </label>
+                        <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle openClose" />
+
+                        <div id="dropdown-content" class="dropdown-content">
                             <ul class="citys">
                                 <h3 class="titleDropdown">Cidade</h3>
+                                <div class="c-line"></div>
                                 <li class="city">Lisboa
                                     <ul class="property-type-dropdown">
                                         <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <div class="c-line"></div>
                                         <li>Casas para arrendar</li>
                                         <li>Apartamentos para arrendar</li>
                                         <li>Kitnets para arrendar</li>
@@ -34,6 +44,7 @@
                                 <li class="city">Porto
                                     <ul class="property-type-dropdown">
                                         <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <div class="c-line"></div>
                                         <li>Casas para arrendar</li>
                                         <li>Apartamentos para arrendar</li>
                                         <li>Kitnets para arrendar</li>
@@ -42,6 +53,7 @@
                                 <li class="city">Funchal
                                     <ul class="property-type-dropdown">
                                         <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <div class="c-line"></div>
                                         <li>Casas para arrendar</li>
                                         <li>Apartamentos para arrendar</li>
                                         <li>Kitnets para arrendar</li>
@@ -50,14 +62,21 @@
                             </ul>
                         </div>
                     </li>
+
                     <li class="dropdown">
-                        <a class="titleHeader" href="../comprar-imovel/comprar-imovel.html">Comprar</a>
-                        <div class="dropdown-content">
+                        <label for="dropdown-toggle-comprar" class="titleHeader link-com-chevron">
+                            Comprar
+                            <span class="chevron"></span> <!-- Aqui está a setinha -->
+                        </label>
+                        <input type="checkbox" id="dropdown-toggle-comprar" class="dropdown-toggle-comprar openClose" />
+                        <div id="dropdown-content-comprar" class="dropdown-content-comprar">
                             <ul class="citys">
                                 <h3 class="titleDropdown">Cidade</h3>
+                                <div class="c-line"></div>
                                 <li class="city">Lisboa
                                     <ul class="property-type-dropdown">
                                         <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <div class="c-line"></div>
                                         <li>Casas para comprar</li>
                                         <li>Apartamentos para comprar</li>
                                         <li>Kitnets para comprar</li>
@@ -66,6 +85,7 @@
                                 <li class="city">Porto
                                     <ul class="property-type-dropdown">
                                         <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <div class="c-line"></div>
                                         <li>Casas para comprar</li>
                                         <li>Apartamentos para comprar</li>
                                         <li>Kitnets para comprar</li>
@@ -74,6 +94,7 @@
                                 <li class="city">Funchal
                                     <ul class="property-type-dropdown">
                                         <h4 class="titleDropdown">Tipo de imóvel</h4>
+                                        <div class="c-line"></div>
                                         <li>Casas para comprar</li>
                                         <li>Apartamentos para comprar</li>
                                         <li>Kitnets para comprar</li>
@@ -93,7 +114,170 @@
                 </ul>
             </div>
         </nav>
-    </header> 
+    </header>
+
+<!-- pesquisa com filtros -->
+ <div class="searchFilter">
+     <div class="search-container">
+         <!-- Input grande de texto -->
+         <input type="text" id="search-input" class="search-input" placeholder="Pesquise por cidade, bairro ou tipo de imóvel...">
+ 
+         <!-- Botões "Filtro" e "Pesquisar" -->
+         <button id="filter-btn" class="action-btn">Filtros</button>
+         <button id="search-btn" class="action-btn">Pesquisar</button>
+     </div>
+ 
+     <!-- Dropdown de filtros -->
+     <div class="filters-dropdown" id="filters-dropdown">
+        <form class="filter-form">
+            <!-- Filtro: Valor -->
+            <div class="filter-item">
+                <label for="min-value">Valor Mínimo</label>
+                <input type="number" id="min-value" name="min-value" placeholder="R$ 500">
+                <label for="max-value">Valor Máximo</label>
+                <input type="number" id="max-value" name="max-value" placeholder="R$ 20.000">
+            </div>
+    
+            <!-- Filtro: Tipos de imóvel (exclusivo, radio) -->
+            <div class="filter-item">
+                <label for="property-type">Tipos de imóvel</label>
+                <label><input type="radio" name="property-type" value="apartment"> Apartamento</label>
+                <label><input type="radio" name="property-type" value="house"> Casa</label>
+                <label><input type="radio" name="property-type" value="condo"> Casa de Condomínio</label>
+                <label><input type="radio" name="property-type" value="kitnet"> Kitnet/Studio</label>
+            </div>
+    
+            <!-- Filtro: Quartos (exclusivo, radio) -->
+            <div class="filter-item">
+                <label for="property-type">Número de quartos</label>
+                <label><input type="radio" name="quartos" value="1"> 1+</label>
+                <label><input type="radio" name="quartos" value="2"> 2+</label>
+                <label><input type="radio" name="quartos" value="3"> 3+</label>
+                <label><input type="radio" name="quartos" value="4"> 4+</label>
+            </div>
+    
+            <!-- Filtro: Vagas de garagem (checkbox) -->
+            <div class="filter-item">
+                <label for="property-type">Vagas de garagem</label>
+                <label><input type="checkbox" name="vagas" value="1"> 1+</label>
+                <label><input type="checkbox" name="vagas" value="2"> 2+</label>
+                <label><input type="checkbox" name="vagas" value="3"> 3+</label>
+            </div>
+    
+            <!-- Filtro: Banheiros (checkbox) -->
+            <div class="filter-item">
+                <label for="property-type">Número de banheiros</label>
+                <label><input type="checkbox" name="banheiros" value="1"> 1+</label>
+                <label><input type="checkbox" name="banheiros" value="2"> 2+</label>
+                <label><input type="checkbox" name="banheiros" value="3"> 3+</label>
+                <label><input type="checkbox" name="banheiros" value="4"> 4+</label>
+            </div>
+    
+            <!-- Filtro: Área (exclusivo, radio) -->
+            <div class="filter-item">
+                <label for="min-area">Área Mínima</label>
+                <input type="number" id="min-area" name="min-area" placeholder="20 m²">
+                <label for="max-area">Área Máxima</label>
+                <input type="number" id="max-area" name="max-area" placeholder="1.000 m²">
+            </div>
+    
+            <!-- Filtro: Mobiliado (checkbox) -->
+            <div class="filter-item">
+                <label><input type="checkbox" name="mobiliado" value="sim"> Mobiliado</label>
+            </div>
+    
+            <!-- Filtro: Aceita pets (checkbox) -->
+            <div class="filter-item">
+                <label><input type="checkbox" name="aceita-pets" value="sim"> Aceita pets</label>
+            </div>
+    
+            <!-- Filtro: Próximo ao metrô (checkbox) -->
+            <div class="filter-item">
+                <label><input type="checkbox" name="proximo-metro" value="sim"> Próximo ao metrô</label>
+            </div>
+    
+            <!-- Filtro: Disponibilidade (checkbox) -->
+            <div class="filter-item">
+                <label for="property-type">Disponibilidade</label>
+                <label><input type="checkbox" name="disponibilidade" value="imediata"> Imediata</label>
+                <label><input type="checkbox" name="disponibilidade" value="em-breve"> Em breve</label>
+            </div>
+    
+            <!-- Filtro: Exclusivos QuintoAndar (checkbox) -->
+            <div class="filter-item">
+                <label><input type="checkbox" name="exclusivos" value="sim"> Exclusivos QuintoAndar</label>
+            </div>
+    
+            <!-- Filtro: Comodidades (checkbox) -->
+            <div class="filter-item">
+                <label for="property-type">Comodidades</label>
+                <label><input type="checkbox" name="comodidade" value="academia"> Academia</label>
+                <label><input type="checkbox" name="comodidade" value="area-verde"> Área verde</label>
+                <label><input type="checkbox" name="comodidade" value="brinquedoteca"> Brinquedoteca</label>
+                <label><input type="checkbox" name="comodidade" value="churrasqueira"> Churrasqueira</label>
+                <label><input type="checkbox" name="comodidade" value="elevador"> Elevador</label>
+                <label><input type="checkbox" name="comodidade" value="lavanderia"> Lavanderia</label>
+                <label><input type="checkbox" name="comodidade" value="piscina"> Piscina</label>
+                <label><input type="checkbox" name="comodidade" value="playground"> Playground</label>
+                <label><input type="checkbox" name="comodidade" value="portaria"> Portaria 24h</label>
+                <label><input type="checkbox" name="comodidade" value="quadra"> Quadra esportiva</label>
+                <label><input type="checkbox" name="comodidade" value="salao-festas"> Salão de festas</label>
+                <label><input type="checkbox" name="comodidade" value="salao-jogos"> Salão de jogos</label>
+                <label><input type="checkbox" name="comodidade" value="sauna"> Sauna</label>
+            </div>
+    
+            <!-- Filtro: Comodidades adicionais (checkbox) -->
+            <div class="filter-item">
+                <label for="property-type">Comodidades adicionais</label>
+                <label><input type="checkbox" name="comodidade-adicional" value="ar-condicionado"> Ar condicionado</label>
+                <label><input type="checkbox" name="comodidade-adicional" value="banheira"> Banheira</label>
+                <label><input type="checkbox" name="comodidade-adicional" value="box"> Box</label>
+                <label><input type="checkbox" name="comodidade-adicional" value="closet"> Closet</label>
+                <label><input type="checkbox" name="comodidade-adicional" value="garden"> Garden/Área privativa</label>
+            </div>
+    
+            <!-- Filtro: Mobílias (checkbox) -->
+            <div class="filter-item">
+                <label for="property-type">Mobílias</label>
+                <label><input type="checkbox" name="mobilia" value="armarios-cozinha"> Armários na cozinha</label>
+                <label><input type="checkbox" name="mobilia" value="armarios-quarto"> Armários no quarto</label>
+                <label><input type="checkbox" name="mobilia" value="armarios-banheiros"> Armários nos banheiros</label>
+                <label><input type="checkbox" name="mobilia" value="cama-casal"> Cama de casal</label>
+                <label><input type="checkbox" name="mobilia" value="cama-solteiro"> Cama de solteiro</label>
+            </div>
+    
+            <!-- Filtro: Eletrodomésticos (checkbox) -->
+            <div class="filter-item">
+                <label for="property-type">Eletrodomésticos</label>
+                <label><input type="checkbox" name="eletrodomesticos" value="fogao"> Fogão</label>
+                <label><input type="checkbox" name="eletrodomesticos" value="geladeira"> Geladeira</label>
+                <label><input type="checkbox" name="eletrodomesticos" value="maquina-lavar"> Máquina de lavar</label>
+                <label><input type="checkbox" name="eletrodomesticos" value="microondas"> Microondas</label>
+            </div>
+    
+            <!-- Filtro: Acessibilidade (checkbox) -->
+            <div class="filter-item">
+                <label for="property-type">Acessibilidade</label>
+                <label><input type="checkbox" name="acessibilidade" value="banheiro-adaptado"> Banheiro adaptado</label>
+                <label><input type="checkbox" name="acessibilidade" value="corrimao"> Corrimão</label>
+                <label><input type="checkbox" name="acessibilidade" value="piso-tatil"> Piso tátil</label>
+            </div>
+    
+            <!-- Filtro: Cômodos (checkbox) -->
+            <div class="filter-item">
+                <label for="property-type">Cômodos</label>
+                <label><input type="checkbox" name="comodos" value="area-servico"> Área de serviço</label>
+                <label><input type="checkbox" name="comodos" value="cozinha-americana"> Cozinha americana</label>
+                <label><input type="checkbox" name="comodos" value="home-office"> Home-office</label>
+                <label><input type="checkbox" name="comodos" value="quintal"> Quintal</label>
+            </div>
+    
+            <!-- Botão para aplicar os filtros -->
+            <button type="submit" class="search-button">Aplicar Filtros</button>
+        </form>
+    </div>
+ </div>
+
 
     <main>
         <section id="properties">
@@ -105,7 +289,8 @@
                         <img src="../carrossel images/pexels-fotoaibe-1571460.jpg" alt="Imóvel 1">
                         <div class="seta Esquerda" onclick="mudarImagem('carrossel1',-1)">&#10094;</div>
                         <div class="seta Direita" onclick="mudarImagem('carrossel1',1)">&#10095;</div>
-                    </div>                    <div class="property-info">
+                    </div>
+                    <div class="property-info">
                         <a href="#" class="arrendaTitleCard">Casa Moderna em Lisboa</a>
                         <p>3 quartos, 2 casas de banho</p>
                         <p class="price">€1.200/mês</p>
@@ -202,6 +387,7 @@
         </div>
     </footer>
 
-    <script src="./consulta-imoveis.js"></script>
+    <script src="../home/script.js"></script>
 </body>
+
 </html>
