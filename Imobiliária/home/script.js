@@ -121,3 +121,4 @@ window.addEventListener('click', function(event) {
         filtersDropdown.style.display = "none";
     }
 });
+
